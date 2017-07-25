@@ -53,6 +53,7 @@
   "scripts": {
     "compile": "babel -d lib/ src/",
     "compile:watch": "babel -w -d lib/ src/",
+    "preinstall": "npm install --ignore-scripts",
     "prepublish": "npm run compile",
     "postinstall": "npm run prepublish",
     "test": "npm run compile && mochify -R spec",
