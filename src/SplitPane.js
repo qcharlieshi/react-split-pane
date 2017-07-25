@@ -177,7 +177,7 @@ class SplitPane extends React.Component {
     render() {
         const { allowResize, children, className, defaultSize, minSize, onResizerClick, onResizerDoubleClick, paneStyle,
             pane1Style: pane1StyleProps, pane2Style: pane2StyleProps, primary, prefixer, resizerClassName,
-            resizerStyle, size, split, positioning style: styleProps } = this.props;
+            resizerStyle, size, split, positioning, style: styleProps } = this.props;
         const disabledClass = allowResize ? '' : 'disabled';
         const resizerClassNamesIncludingDefault = (resizerClassName ?
               `${resizerClassName} ${RESIZER_DEFAULT_CLASSNAME}` : resizerClassName);
