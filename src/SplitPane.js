@@ -187,7 +187,7 @@ class SplitPane extends React.Component {
                 display: 'flex',
                 flex: 1,
                 height: '100%',
-                position: 'positioning',
+                position: positioning,
                 outline: 'none',
                 overflow: 'hidden',
                 MozUserSelect: 'text',
