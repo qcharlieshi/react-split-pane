@@ -177,7 +177,7 @@ class SplitPane extends React.Component {
     render() {
         const { allowResize, children, className, defaultSize, minSize, onResizerClick, onResizerDoubleClick, paneStyle,
             pane1Style: pane1StyleProps, pane2Style: pane2StyleProps, primary, prefixer, resizerClassName,
-            resizerStyle, size, split, style: styleProps } = this.props;
+            resizerStyle, size, split, positioning style: styleProps } = this.props;
         const disabledClass = allowResize ? '' : 'disabled';
         const resizerClassNamesIncludingDefault = (resizerClassName ?
               `${resizerClassName} ${RESIZER_DEFAULT_CLASSNAME}` : resizerClassName);
@@ -187,7 +187,7 @@ class SplitPane extends React.Component {
                 display: 'flex',
                 flex: 1,
                 height: '100%',
-                position: 'absolute',
+                position: 'positioning',
                 outline: 'none',
                 overflow: 'hidden',
                 MozUserSelect: 'text',
@@ -284,6 +284,7 @@ SplitPane.propTypes = {
     pane2Style: stylePropType,
     resizerClassName: PropTypes.string,
     step: PropTypes.number,
+    positioning: PropTypes.string
 };
 
 SplitPane.defaultProps = {
@@ -292,6 +293,7 @@ SplitPane.defaultProps = {
     prefixer: new Prefixer({ userAgent: USER_AGENT }),
     primary: 'first',
     split: 'vertical',
+    positioning: 'absolute'
 };
 
 export default SplitPane;
